@@ -12,16 +12,23 @@ def load_library(sourcefile)
   emos[:get_emoticon] = {}
 
   loadedfile.each() { |key, value| emos[:get_meaning][value[1]] = key }
-  loadedfile.each() do |key, value|
-    e_emo_value = loadedfile[key][value[0]]
-    emos[:get_emoticon][value[0]] = e_emo_value
+  loadedfile.each() { |key, value| emos[:get_emoticon][value[0]] = value[1] }
 
-  end
   emos
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file,emoticon)
+
+  data_loaded = load_library(file)
+  message = ""
+  return_value = data_loaded[:get_emoticon].fetch(""emoticon"")
+#binding.pry
+  if return_value == nil
+    message = "I am sory"
+  else
+    message = return_value
+  end
+binding.pry
 end
 
 def get_english_meaning
