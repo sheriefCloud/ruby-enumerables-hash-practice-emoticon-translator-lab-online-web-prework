@@ -22,13 +22,13 @@ def get_japanese_emoticon(file,emoticon)
   data_loaded = load_library(file)
   message = ""
   return_value = data_loaded[:get_emoticon].fetch(""emoticon"")
-#binding.pry
+binding.pry
   if return_value == nil
     message = "I am sory"
   else
     message = return_value
   end
-binding.pry
+
 end
 
 def get_english_meaning
