@@ -23,11 +23,11 @@ def get_japanese_emoticon(file,emoticon)
   message = ""
   return_value = data_loaded[:get_emoticon].detect {|key| key == emoticon }
 #binding.pry
-  if return_value == nil
-    message = "I am sory"
-  else
-    message = return_value
-  end
+  # if return_value == nil
+  #   message = "I am sory"
+  # else
+  #   message = return_value
+  # end
 
 end
 
