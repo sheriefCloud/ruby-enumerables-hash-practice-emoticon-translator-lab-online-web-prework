@@ -21,7 +21,7 @@ def get_japanese_emoticon(file,emoticon)
 
   data_loaded = load_library(file)
   message = ""
-  return_value = data_loaded[:get_emoticon].fetch(emoticon)
+  return_value = data_loaded[:get_emoticon].find(emoticon)
 #binding.pry
   if return_value == nil
     message = "I am sory"
